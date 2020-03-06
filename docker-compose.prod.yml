@@ -6,7 +6,7 @@ services:
     environment:
       NODE_ENV: 'production'
       VIRTUAL_PORT: "3000"
-      LETSENCRYPT_HOST: "301.abbi-studio.fr"
+      LETSENCRYPT_HOST: "*.301.abbi-studio.fr"
       VIRTUAL_HOST: "*.301.abbi-studio.fr"
     volumes:
       - ./:/home/node/app
