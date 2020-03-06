@@ -1,0 +1,7 @@
+version: '3'
+services:
+  301-redirect:
+    command: "npm run dev"
+    environment:
+      NODE_ENV: 'development'
+      VIRTUAL_HOST: "*.301.abbi-studio.local"
