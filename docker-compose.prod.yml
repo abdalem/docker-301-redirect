@@ -2,18 +2,11 @@ version: '3'
 services:
   301-redirect:
     image: abdalem/301-redirect
-    build: .
     environment:
-      NODE_ENV: 'production'
+      NODE_ENV: "production"
       VIRTUAL_PORT: "3000"
-      LETSENCRYPT_HOST: "301.abbi-studio.fr,*.301.abbi-studio.fr"
       VIRTUAL_HOST: "*.301.abbi-studio.fr"
-    volumes:
-      - ./:/home/node/app
-      - node_modules:/home/node/app/node_modules
 networks:
   default:
     external:
       name: nginx-reverse-proxy
-volumes: 
-  node_modules:
